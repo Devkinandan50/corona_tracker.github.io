@@ -1,0 +1,112 @@
+{% extends 'basic.html' %}
+
+{% block title %} live CovidCases In World {% endblock %}
+
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'worldcase/worldcaseindex.css'%}">
+{% endblock %}
+
+
+{% block css %}
+{% endblock %}
+
+
+
+{% block body %}
+<div id="main_h">
+    <div class="container">
+        <h2 class="title">
+            <span class="title-word title-word-1">live</span>
+            <span class="title-word title-word-2">Corona</span>
+            <span class="title-word title-word-5">Cases</span>
+            <span class="title-word title-word-3">Tracker</span>
+            <span class="title-word title-word-4">(World)</span>
+        </h2>
+    </div>
+    <p>Last Updated at:
+    <span id="date_corona"></span>
+    </p>
+</div>
+
+<div id="globalcases">
+    <div class="wrapper">
+        <div class="box">
+            <div class="front-face">
+                <div class="icon">
+                    <img id="confirm_img_logo" src="{% static 'worldcase/img/confirmcase.jpg' %}" alt="er">
+                </div>
+                <span>CovidCases</span>
+            </div>
+            <div class="back-face">
+                <h2>Today's Confirm Cases</h2>
+                <h1 id="g_today_c_cases"></h1><br>
+
+                <h2>Total Confirm Cases</h2>
+                <h1 id="g_total_c_cases"></h1>
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="front-face">
+                <div class="icon">
+                    <img id="death_img_logo" src="{% static 'worldcase/img/deathcases.jfif' %}" alt="er">
+                </div>
+                <span>Deaths</span>
+            </div>
+            <div class="back-face">
+                <h2>Today's Death Cases</h2>
+                <h1 id="g_today_d_cases"></h1><br>
+
+                <h2>Total Death Cases</h2>
+                <h1 id="g_total_d_cases"></h1>
+
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="front-face">
+                <div class="icon">
+                    <img id="recovered_img_logo" src="{% static 'worldcase/img/recoveredcases.jfif' %}" alt="er">
+                </div>
+                <span>Recovered</span>
+            </div>
+            <div class="back-face">
+                <h2>Today's Recovered Cases</h2>
+                <h1 id="g_today_r_cases"></h1><br>
+
+                <h2>Total Recovered Cases</h2>
+                <h1 id="g_total_r_cases"></h1>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="backcolour">
+    <div id="countrywisecase">COUNTRYWISE CORONA DATA</div>
+    <table style="width:75%">
+        <thead>
+            <tr>
+                <th>Sr. No.</th>
+                <th>Country</th>
+                <th>Country Code</th>
+                <th>Newcases</th>
+                <th>Deaths</th>
+                <th>Recovered</th>
+                <th>Total Cases</th>
+                <th>Total Deaths</th>
+                <th>Total Recovered</th>
+            </tr>
+        </thead>
+        <tbody id="countrycase"></tbody>
+    </table>
+</div>
+{% endblock %}
+
+
+
+{% block script %}
+<script src="{% static 'worldcase/worldcaseindex.js'%}"></script>
+{% endblock %}

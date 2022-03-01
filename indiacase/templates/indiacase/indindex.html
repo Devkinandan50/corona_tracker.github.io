@@ -1,0 +1,103 @@
+{% extends 'basic.html' %}
+
+{% block title %} CovidCases In India {% endblock %}
+
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'indiacase/indiacaseindex.css'%}">
+{% endblock %}
+
+
+
+{% block css %}
+{% endblock %}
+
+
+
+
+
+{% block body %}
+<div id="main_h">
+  <div class="container">
+      <h2 class="title">
+          <span class="title-word title-word-1">live</span>
+          <span class="title-word title-word-2">CoronaCases</span>
+          <span class="title-word title-word-3">Tracker</span>
+          <span class="different_colour">India</span>
+          
+      </h2>
+  </div>
+  <p>Last Updated at:
+  <span id="date_corona"></span>
+  </p>
+</div>
+
+<div id="indiacases">
+  <div class="wrapper">
+      <div class="box">
+          <div class="front-face">
+              <div class="icon">
+                  <img id="confirm_img_logo" src="{% static 'worldcase/img/confirmcase.jpg' %}" alt="er">
+              </div>
+              <span>CovidCases</span>
+          </div>
+          <div class="back-face">
+              <h2 id="see_cases">Confirm Cases</h2>
+              <h1 id="i_today_c_cases"></h1><br>
+          </div>
+      </div>
+
+      <div class="box">
+          <div class="front-face">
+              <div class="icon">
+                  <img id="death_img_logo" src="{% static 'worldcase/img/deathcases.jfif' %}" alt="er">
+              </div>
+              <span>Deaths</span>
+          </div>
+          <div class="back-face">
+              <h2 id="see_cases">Death Cases</h2>
+              <h1 id="i_today_d_cases"></h1><br>
+          </div>
+      </div>
+
+      <div class="box">
+          <div class="front-face">
+              <div class="icon">
+                  <img id="recovered_img_logo" src="{% static 'worldcase/img/recoveredcases.jfif' %}" alt="er">
+              </div>
+              <span>Recovered</span>
+          </div>
+          <div class="back-face">
+              <h2 id="see_cases">Recovered Cases</h2>
+              <h1 id="i_today_r_cases"></h1><br>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div id="backcolour">
+  <div id="statewisecase">STATEWISE CORONA DATA</div>
+  <table style="width:75%">
+      <thead>
+          <tr>
+              <th>Sr. No.</th>
+              <th>States</th>
+              <th>Indian Confirmcases</th>
+              <th>Foreign Confirmcases</th>
+              <th>Total Confirmcases</th>
+              <th>Deaths</th>
+              <th>Recovered</th>
+          </tr>
+      </thead>
+      <tbody id="statecase"></tbody>
+  </table>
+</div>
+{% endblock %}
+
+
+
+
+{% block script %}
+<script src="{% static 'indiacase/indiacaseindex.js'%}"></script>
+{% endblock %}

@@ -1,0 +1,16 @@
+body{
+    background-color: pink;
+}
+#back_img::before{
+    content: "";
+    background: url("{% static 'indiacase/img/homepage.jfif'%}");
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 50px;
+    z-index: -1;
+    opacity: 0.8;
+    
+
+}

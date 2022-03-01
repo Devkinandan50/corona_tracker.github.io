@@ -1,0 +1,29 @@
+{% extends 'basic.html' %}
+
+{% block title %} Covid Tracker {% endblock %}
+
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'indiacase/homepage.css'%}">
+{% endblock %}
+
+
+{% block css %} 
+{% endblock %}
+
+
+{% block body %}
+<div id="#back_img">Coronavirus disease (COVID-19)</div>
+<div>Symptoms</div>
+<div>Causes</div>
+<div>Prevention</div>
+
+{% endblock %}
+
+
+{% block script %}
+<script src="{% static 'indiacase/homepage.js'%}"></script>
+{% endblock %}
+
+    
